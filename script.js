@@ -37,6 +37,8 @@ var lowercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 var specialCharacters = ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+', '[', '{', ']', '}', ',', '<', '.', '>', '/', '?', ';', ':', '"']
 var numericValues = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
+var selectedCharacters = []
+
 console.log (uppercase);
 console.log (lowercase);
 console.log (specialCharacters);
@@ -53,32 +55,40 @@ console.log(characterpool);
 
   
 if (CharacterCount <8)
-{console.log("finish");
+{console.log("canceled");
 alert("Password generation failure: password must be within 8 and 128 characters");
   return; 
 }
 
 if (CharacterCount > 128) {
-  console.log("finish");
+  console.log("canceled");
   alert("Password generation failure: password must be within 8 and 128 characters");
   return;
 }
 var IncludeSpecialCharacters = confirm ("click OK to confirm including special characters.");
 if (IncludeSpecialCharacters) {
-
+selectedCharacters = selectedCharacters.concat(IncludeSpecialCharacters);
+console.log(selectedCharacters);
 }
 var IncludeNumericCharacters = confirm ("Click OK to confirm including numeric characters");
 if (IncludeNumericCharacters) {
-
+selectedCharacters = selectedCharacters.concat(IncludeNumericCharacters);
+console.log(selectedCharacters);
 }
 var IncludeLowercaseCharacters = confirm ("Click OK to confirm including lowercase charcters");
 if (IncludeLowercaseCharacters) {
-
+selectedCharacters = selectedCharacters.concat(IncludeLowercaseCharacters);
+console.log(selectedCharacters);
 }
 var IncludeUppercaseCharacters = confirm ("Click OK to confirm including uppercase characters");
 if (IncludeUppercaseCharacters) {
-
+selectedCharacters = selectedCharacters.concat(IncludeUppercaseCharacters);
+console.log(selectedCharacters);
 }
+for (var i = 0; i < CharacterCount; i++) {
+  selectedCharacters.concat(selectedCharacters(math.floor(math.random() * selectedCharacters.length)));
+}
+
 console.log(typeof IncludeSpecialCharacters);
 
 var specialcharactersfalse = IncludeSpecialCharacters = false;
@@ -94,6 +104,8 @@ if (atleastoneselected) {
   console.log("canceled");
   return;
 }
+
+
 
 }
 
