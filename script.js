@@ -88,11 +88,6 @@ console.log(selectedCharacters);
 
 console.log(typeof IncludeSpecialCharacters);
 
-var specialcharactersfalse = IncludeSpecialCharacters = false;
-console.log(IncludeLowercaseCharacters);
-var numericcharactersfalse = IncludeNumericCharacters = false; 
-var lowercasecharactersfalse = IncludeLowercaseCharacters = false;
-
 var atleastoneselected = (!IncludeSpecialCharacters && !IncludeNumericCharacters && !IncludeLowercaseCharacters && !IncludeUppercaseCharacters);
 console.log(atleastoneselected);
 
@@ -102,13 +97,13 @@ if (atleastoneselected) {
   return;
 }
 
-var passwordgen = []
+var passwordgen = "";
 
 for (var i = 0; i < CharacterCount; i++) {
 
 var calculatedrandom = Math.floor(Math.random() * selectedCharacters.length);
 
-passwordgen = calculatedrandom + CharacterCount + selectedCharacters[calculatedrandom] + i++ +selectedCharacters.length + Math.floor(Math.random());
+passwordgen = selectedCharacters[calculatedrandom] + passwordgen; 
 
 console.log(selectedCharacters.length);
 
