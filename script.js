@@ -64,10 +64,37 @@ if (CharacterCount > 128) {
   return;
 }
 var IncludeSpecialCharacters = confirm ("click OK to confirm including special characters.");
+if (IncludeSpecialCharacters) {
 
+}
 var IncludeNumericCharacters = confirm ("Click OK to confirm including numeric characters");
+if (IncludeNumericCharacters) {
+
+}
 var IncludeLowercaseCharacters = confirm ("Click OK to confirm including lowercase charcters");
+if (IncludeLowercaseCharacters) {
+
+}
 var IncludeUppercaseCharacters = confirm ("Click OK to confirm including uppercase characters");
+if (IncludeUppercaseCharacters) {
+
+}
+console.log(typeof IncludeSpecialCharacters);
+
+var specialcharactersfalse = IncludeSpecialCharacters = false;
+console.log(IncludeLowercaseCharacters);
+var numericcharactersfalse = IncludeNumericCharacters = false; 
+var lowercasecharactersfalse = IncludeLowercaseCharacters = false;
+
+var atleastoneselected = (!IncludeSpecialCharacters && !IncludeNumericCharacters && !IncludeLowercaseCharacters && !IncludeUppercaseCharacters);
+console.log(atleastoneselected);
+
+if (atleastoneselected) {
+  alert("Please select one or more password criteria. Retry Generate Password.");
+  console.log("canceled");
+  return;
+}
+
 }
 
 generateBtn.addEventListener("click", writePassword);
