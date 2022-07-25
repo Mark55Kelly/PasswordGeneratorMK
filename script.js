@@ -106,7 +106,7 @@ var passwordgen = []
 
 for (var i = 0; i <= CharacterCount; i++) {
 
-var calculatedrandom = selectedCharacters.concat(Math.floor(Math.random() * selectedCharacters));
+var calculatedrandom = Math.floor(Math.random() * selectedCharacters);
 
 console.log(selectedCharacters);
 
