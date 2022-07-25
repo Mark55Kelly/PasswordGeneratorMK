@@ -86,19 +86,6 @@ selectedCharacters = selectedCharacters.concat(uppercase);
 console.log(selectedCharacters);
 }
 
-
-
-
-
-
-for (var i = 0; i <= CharacterCount; i++) {
-
-selectedCharacters;
-console.log(selectedCharacters);
-  var passwordgen = []
-console.log(passwordgen);
-}
-
 console.log(typeof IncludeSpecialCharacters);
 
 var specialcharactersfalse = IncludeSpecialCharacters = false;
@@ -114,6 +101,19 @@ if (atleastoneselected) {
   console.log("canceled");
   return;
 }
+
+var passwordgen = []
+
+for (var i = 0; i <= CharacterCount; i++) {
+
+var calculatedrandom = selectedCharacters.concat(Math.floor(Math.random() * selectedCharacters));
+
+console.log(selectedCharacters);
+
+}
+passwordgen = passwordgen.concat(selectedCharacters);
+console.log(passwordgen);
+
 var passwordgenerated = passwordgen;
 
 
