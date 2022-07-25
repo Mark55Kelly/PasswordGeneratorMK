@@ -15,10 +15,8 @@ console.log (specialCharacters[10]);
 //all of these need to be within the button being generated so that it takes place within that object and not outside of it in the window like it just did there... I think I'm starting to get this shit now. 
 
 
-var IncludeSpecialCharacters = confirm("click OK to confirm including special characters.")
-var IncludeNumericCharacters = confirm("Click OK to confirm including numeric characters")
-var IncludeLowercaseCharacters = confirm("Click OK to confirm including lowercase charcters")
-var IncludeUppercaseCharacters = confirm("Click OK to confirm including uppercase characters")
+
+// removed my variables here... 
 
 
 // Get references to the #generate element
@@ -38,14 +36,7 @@ function writePassword() {
 
 //my change here.
 //notes: putting the prompt inside the function right away didn't work it made the window pop open.
-function generatePassword() {
-  var CharacterCount = prompt("How many characters would you like your password to contain?");
-  if (CharacterCount >7)
-  console.log("could this be progress?");
 
-}
-
-generatePassword();
 //My change End.
 
 //prompt ("How many characters would you like in your password?");
@@ -55,3 +46,16 @@ generatePassword();
 // Add event listener to generate button
 
 generateBtn.addEventListener("click", writePassword);
+
+var CharacterCount = prompt("How many characters would you like your password to contain?");
+if (CharacterCount <8, CharacterCount > 128) {
+  return;
+}
+
+console.log(CharacterCount);
+
+};  
+characternumconfirm();
+
+generatePassword();
+//Notes: If I put the VarCharacterCount prompt down below then it 
