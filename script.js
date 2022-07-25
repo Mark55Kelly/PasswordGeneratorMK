@@ -32,7 +32,6 @@ function writePassword() {
 
 function generatePassword() {
   
-
 var uppercase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 var lowercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 var specialCharacters = ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+', '[', '{', ']', '}', ',', '<', '.', '>', '/', '?', ';', ':', '"']
@@ -47,17 +46,28 @@ console.log (lowercase[21]);
 console.log (specialCharacters[10]);
 
 var characterpool = uppercase.concat(lowercase, specialCharacters, numericValues);
+
 console.log(characterpool);
 
-var include
-promptmessage
   var CharacterCount = prompt("How many characters would you like your password to contain?");
-  var IncludeSpecialCharacters = confirm ("click OK to confirm including special characters.");
-  var IncludeNumericCharacters = confirm ("Click OK to confirm including numeric characters");
-  var IncludeLowercaseCharacters = confirm ("Click OK to confirm including lowercase charcters");
-  var IncludeUppercaseCharacters = confirm ("Click OK to confirm including uppercase characters");
-  
 
+  
+if (CharacterCount <8)
+{console.log("finish");
+alert("Password generation failure: password must be within 8 and 128 characters");
+  return; 
+}
+
+if (CharacterCount > 128) {
+  console.log("finish");
+  alert("Password generation failure: password must be within 8 and 128 characters");
+  return;
+}
+var IncludeSpecialCharacters = confirm ("click OK to confirm including special characters.");
+
+var IncludeNumericCharacters = confirm ("Click OK to confirm including numeric characters");
+var IncludeLowercaseCharacters = confirm ("Click OK to confirm including lowercase charcters");
+var IncludeUppercaseCharacters = confirm ("Click OK to confirm including uppercase characters");
 }
 
 generateBtn.addEventListener("click", writePassword);
@@ -71,8 +81,4 @@ generateBtn.addEventListener("click", writePassword);
 //if (passwordLength > 128) stop function 
 
 // Add event listener to generate button
-
-
-generatePassword();
-writePassword();
 //Notes: If I put the VarCharacterCount prompt down below then it 
