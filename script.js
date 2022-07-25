@@ -104,11 +104,12 @@ if (atleastoneselected) {
 
 var passwordgen = []
 
-for (var i = 0; i <= CharacterCount; i++) {
+for (var i = 0; i < CharacterCount; i++) {
 
-var calculatedrandom = Math.floor(Math.random() * selectedCharacters);
+var calculatedrandom = Math.floor(Math.random() * selectedCharacters.length);
 
-passwordgen = passwordgen.concat(selectedCharacters.random);
+passwordgen = calculatedrandom + CharacterCount + selectedCharacters[i];
+
 console.log(selectedCharacters);
 console.log(passwordgen);
 
