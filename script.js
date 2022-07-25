@@ -25,7 +25,6 @@ console.log(generateBtn);
 
 
 // Write password to the #password input
-
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -36,23 +35,37 @@ function writePassword() {
 
 //my change here.
 //notes: putting the prompt inside the function right away didn't work it made the window pop open.
+function generatePassword() {
 
-var buttoncontrol = generateBtn.addEventListener("click", writePassword);
+var CharacterCount = prompt("How many characters would you like your password to contain?");
+var IncludeSpecialCharacters = confirm ("click OK to confirm including special characters.");
+var IncludeNumericCharacters = confirm ("Click OK to confirm including numeric characters");
+var IncludeLowercaseCharacters = confirm ("Click OK to confirm including lowercase charcters");
+var IncludeUppercaseCharacters = confirm ("Click OK to confirm including uppercase characters");
+
+}
+var buttoncontrol = generateBtn.addEventListener("click", writePassword, promptconfirm);
+buttoncontrol;
 
 function generatePassword (buttoncontrol) {
-  if (buttoncontrol) {
-
-  CharacterCount;
+buttoncontrol;
+  prompt("How many characters would you like your password to contain?");
   }
-  else if (CharacterCount > 7, CharacterCount <129) {
+  if (CharacterCount > 7, CharacterCount <129) {
     var CharacterCount = prompt("How many characters would you like your password to contain?");
     console.log("This is working? " + CharacterCount);
-  } else 
-  return;
-};
+  }
 
 
 
+  var promptconfirm = {
+    CharacterCount: prompt("How many characters would you like your password to contain?"),
+    IncludeSpecialCharacters: confirm("click OK to confirm including special characters."),
+    IncludeNumericCharacters: confirm("Click OK to confirm including numeric characters"),
+    IncludeLowercaseCharacters: confirm("Click OK to confirm including lowercase charcters"),
+    IncludeUppercaseCharacters: confirm("Click OK to confirm including uppercase characters")
+  
+  }
 
 
 //My change End.
