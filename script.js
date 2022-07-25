@@ -108,7 +108,9 @@ for (var i = 0; i < CharacterCount; i++) {
 
 var calculatedrandom = Math.floor(Math.random() * selectedCharacters.length);
 
-passwordgen = calculatedrandom + CharacterCount + selectedCharacters[i];
+passwordgen = calculatedrandom + CharacterCount + selectedCharacters[calculatedrandom] + i++ +selectedCharacters.length + Math.floor(Math.random());
+
+console.log(selectedCharacters.length);
 
 console.log(selectedCharacters);
 console.log(passwordgen);
