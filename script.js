@@ -67,22 +67,22 @@ if (CharacterCount > 128) {
 }
 var IncludeSpecialCharacters = confirm ("click OK to confirm including special characters.");
 if (IncludeSpecialCharacters) {
-selectedCharacters.push(specialCharacters);
+selectedCharacters = selectedCharacters.concat(specialCharacters);
 console.log(selectedCharacters);
 }
 var IncludeNumericCharacters = confirm ("Click OK to confirm including numeric characters");
 if (IncludeNumericCharacters) {
-selectedCharacters.push(numericValues);
+selectedCharacters = selectedCharacters.concat(numericValues);
 console.log(selectedCharacters);
 }
 var IncludeLowercaseCharacters = confirm ("Click OK to confirm including lowercase charcters");
 if (IncludeLowercaseCharacters) {
-selectedCharacters.push(lowercase);
+selectedCharacters = selectedCharacters.concat(lowercase);
 console.log(selectedCharacters);
 }
 var IncludeUppercaseCharacters = confirm ("Click OK to confirm including uppercase characters");
 if (IncludeUppercaseCharacters) {
-selectedCharacters.push(uppercase);
+selectedCharacters = selectedCharacters.concat(uppercase);
 console.log(selectedCharacters);
 }
 
@@ -107,14 +107,12 @@ var passwordgen = []
 for (var i = 0; i <= CharacterCount; i++) {
 
 var calculatedrandom = Math.floor(Math.random() * selectedCharacters);
-selectedCharacters[random];
 
-
+passwordgen = passwordgen.concat(selectedCharacters.random);
 console.log(selectedCharacters);
+console.log(passwordgen);
 
 }
-passwordgen = passwordgen.concat(selectedCharacters);
-console.log(passwordgen);
 
 var passwordgenerated = passwordgen;
 
