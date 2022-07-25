@@ -37,6 +37,24 @@ function writePassword() {
 //my change here.
 //notes: putting the prompt inside the function right away didn't work it made the window pop open.
 
+var buttoncontrol = generateBtn.addEventListener("click", writePassword);
+
+function generatePassword (buttoncontrol) {
+  if (buttoncontrol) {
+
+  CharacterCount;
+  }
+  else if (CharacterCount > 7, CharacterCount <129) {
+    var CharacterCount = prompt("How many characters would you like your password to contain?");
+    console.log("This is working? " + CharacterCount);
+  } else 
+  return;
+};
+
+
+
+
+
 //My change End.
 
 //prompt ("How many characters would you like in your password?");
@@ -45,17 +63,14 @@ function writePassword() {
 
 // Add event listener to generate button
 
-generateBtn.addEventListener("click", writePassword);
 
-var CharacterCount = prompt("How many characters would you like your password to contain?");
-if (CharacterCount <8, CharacterCount > 128) {
-  return;
+if (CharacterCount >7, CharacterCount <129) {
+  console.log(CharacterCount);
+  var CharacterCount = prompt("How many characters would you like your password to contain?");
 }
+ 
 
-console.log(CharacterCount);
-
-};  
-characternumconfirm();
 
 generatePassword();
+writePassword();
 //Notes: If I put the VarCharacterCount prompt down below then it 
