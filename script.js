@@ -86,12 +86,16 @@ selectedCharacters = selectedCharacters.concat(IncludeUppercaseCharacters);
 console.log(selectedCharacters);
 }
 
-var calculatedrandom = Math.floor(Math.random());
+var calculatedrandom = Math.floor(Math.random() * selectedCharacters.length);
 console.log(calculatedrandom);
 
+
 var passwordgen = []
+
+
 for (var i = 0; i <= CharacterCount; i++) {
-var calculatedrandom = 
+passwordgen = passwordgen.concat(selectedCharacters, passwordgen* calculatedrandom) + selectedCharacters[i];
+console.log(passwordgen);
 }
 
 console.log(typeof IncludeSpecialCharacters);
